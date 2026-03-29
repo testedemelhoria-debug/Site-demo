@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oral Unic | Dra. Laíse Carvalho - Nova Friburgo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        turquesa: '#5BC8C8',
+                        escuro: '#0F2A1E',
+                        demoBar: '#1A2C2C',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .nav-scrolled { background-color: white !important; box-shadow: 0 2px 10px rgba(0,0,0,0.1); color: #1a1a1a !important; }
+        .hero-overlay { background: rgba(0, 0, 0, 0.5); }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+    <div class="bg-demoBar text-white py-2 px-4 text-center text-sm sticky top-0 z-[100] flex flex-col md:flex-row items-center justify-center gap-3">
+        <span>Este é um site de demonstração. Quer um site profissional igual para o seu negócio?</span>
+        <a href="https://wa.me/5522981338015?text=Olá! Quero um site igual a esse para o meu negócio!" class="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded font-bold transition">
+            Quero um site assim!
+        </a>
+    </div>
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 text-white pt-10 md:pt-14">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-serif font-bold tracking-widest">ORAL UNIC</div>
+            
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="#home" class="hover:text-turquesa transition">Início</a>
+                <a href="#sobre" class="hover:text-turquesa transition">Sobre</a>
+                <a href="#servicos" class="hover:text-turquesa transition">Serviços</a>
+                <a href="https://wa.me/5522981338015" class="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition">Agendar Consulta</a>
+            </div>
+
+            <button class="md:hidden text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden bg-white text-gray-900 absolute w-full flex flex-col p-6 space-y-4 shadow-xl">
+            <a href="#home" class="border-b pb-2">Início</a>
+            <a href="#sobre" class="border-b pb-2">Sobre</a>
+            <a href="#servicos" class="border-b pb-2">Serviços</a>
+            <a href="https://wa.me/5522981338015" class="bg-green-500 text-white text-center py-2 rounded">Agendar Agora</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1629909608135-ca092194a1d6?q=80&w=2070&auto=format&fit=crop');">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 container mx-auto px-6">
+            <h1 class="text-4xl md:text-7xl font-serif text-white mb-6">Sorrisos que transformam vidas.</h1>
+            <p class="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">Dra. Laíse Carvalho: Excelência em odontologia minimalista e avançada em Nova Friburgo.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://wa.me/5522981338015" class="bg-turquesa text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition shadow-lg">Agendar via WhatsApp</a>
+                <a href="#servicos" class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-gray-900 transition">Ver Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div>
+                <i class="fas fa-microscope text-turquesa text-4xl mb-4"></i>
+                <h3 class="font-serif text-xl font-bold mb-2">Tecnologia</h3>
+                <p class="text-gray-600">Equipamentos de última geração para diagnósticos precisos.</p>
+            </div>
+            <div>
+                <i class="fas fa-heart text-turquesa text-4xl mb-4"></i>
+                <h3 class="font-serif text-xl font-bold mb-2">Humanização</h3>
+                <p class="text-gray-600">Atendimento acolhedor focado no bem-estar do paciente.</p>
+            </div>
+            <div>
+                <i class="fas fa-award text-turquesa text-4xl mb-4"></i>
+                <h3 class="font-serif text-xl font-bold mb-2">Especialista</h3>
+                <p class="text-gray-600">Dra. Laíse Carvalho possui vasta experiência clínica.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-serif text-center mb-16">Nossos Serviços</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 border border-gray-100 bg-white hover:border-turquesa transition duration-500">
+                    <h4 class="font-serif text-2xl mb-4">Limpeza Especializada</h4>
+                    <p class="text-gray-600 mb-4">Remoção de tártaro e placas com técnicas indolores.</p>
+                </div>
+                <div class="p-8 border border-gray-100 bg-white hover:border-turquesa transition duration-500">
+                    <h4 class="font-serif text-2xl mb-4">Restaurações Estéticas</h4>
+                    <p class="text-gray-600 mb-4">Devolvendo a forma e cor natural dos seus dentes.</p>
+                </div>
+                <div class="p-8 border border-gray-100 bg-white hover:border-turquesa transition duration-500">
+                    <h4 class="font-serif text-2xl mb-4">Próteses Avançadas</h4>
+                    <p class="text-gray-600 mb-4">Reabilitação oral completa com materiais de alta qualidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-serif mb-8">Onde Estamos</h2>
+            <p class="mb-8">Av. Conselheiro Július Arp, 80 - Loja 119, Nova Friburgo/RJ</p>
+            <div class="w-full h-80 bg-gray-300 rounded-lg overflow-hidden grayscale hover:grayscale-0 transition duration-700">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.462446755498!2d-42.5323!3d-22.2858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDE3JzA4LjkiUyA0MsKwMzEnNTYuMyJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-escuro text-white py-16 px-6">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <div class="text-2xl font-serif font-bold tracking-widest mb-6 text-turquesa">ORAL UNIC</div>
+                <p class="text-gray-400">Excelência em odontologia por Dra. Laíse Carvalho.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Páginas</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a href="#home" class="hover:text-white">Início</a></li>
+                    <li><a href="#sobre" class="hover:text-white">Sobre</a></li>
+                    <li><a href="#servicos" class="hover:text-white">Serviços</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Contato</h4>
+                <p class="text-gray-400"> (22) 98133-8015</p>
+                <p class="text-gray-400">Av. Conselheiro Július Arp, 80</p>
+                <p class="text-gray-400">Nova Friburgo - RJ</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Horários</h4>
+                <p class="text-gray-400">Seg – Sáb: 09h – 20h</p>
+                <p class="text-gray-400">Domingo: Fechado</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-[100] flex flex-col items-end">
+        <div class="bg-white text-gray-800 p-3 rounded-lg shadow-xl mb-3 text-xs font-bold border-l-4 border-green-500 animate-bounce">
+            Crie um site assim para o seu negócio! 
+            <br>
+            <a href="https://wa.me/5522981338015?text=Olá! Quero um site igual a esse para o meu negócio!" class="text-green-600 underline">Quero um site assim!</a>
+        </div>
+        <a href="https://wa.me/5522981338015" target="_blank" class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center text-white text-3xl shadow-2xl hover:scale-110 transition-all">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script>
+        // Script para mudar cor da Navbar ao rolar
+        window.onscroll = function() {
+            var nav = document.getElementById('navbar');
+            if (window.pageYOffset > 50) {
+                nav.classList.add("nav-scrolled");
+                nav.classList.remove("text-white");
+                nav.classList.remove("pt-10", "md:pt-14");
+            } else {
+                nav.classList.remove("nav-scrolled");
+                nav.classList.add("text-white");
+                nav.classList.add("pt-10", "md:pt-14");
+            }
+        };
+    </script>
+</body>
+</html>
